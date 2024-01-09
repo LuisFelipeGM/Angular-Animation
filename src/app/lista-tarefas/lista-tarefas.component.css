@@ -1,3 +1,62 @@
+.busca {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+  margin-top: 40px;
+}
+
+.busca p {
+  color: #6C757D;
+  font-size: 16px;
+  font-weight: 600;
+  margin-right: 32px;
+}
+
+#campo-busca::placeholder {
+  color: #6C757D;
+  font-family: 'Prompt';
+  font-size: 16px;
+  padding: 8px 0 8px 8px;
+}
+
+.busca input {
+  border: 1px solid #6C757D;
+  border-radius: 8px;
+  font-family: 'Prompt';
+  font-size: 16px;
+  height: 40px;
+  width: 300px;
+  padding-left: 12px;
+}
+
+input[type='search']:focus {
+  background-image: none;
+  outline: none;
+  text-decoration: none;
+}
+
+input[type="search"]::-webkit-search-decoration,
+::-webkit-search-cancel-button,
+::-webkit-search-results-button,
+::-webkit-search-results-decoration {
+  display: none;
+}
+
+@media(max-width: 1060px) {
+  .busca {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .busca p {
+    margin-bottom: 12px;
+    margin-right: 0;
+  }
+}
+
+
 .lista-tarefas {
   display: flex;
   flex-direction: column;
@@ -29,7 +88,7 @@
   min-height: 80vh;
 }
 
-.listagem-tarefas h2{
+.listagem-tarefas h2 {
   font-size: 32px;
   font-family: 'Prompt';
   font-weight: 400;
@@ -38,7 +97,7 @@
 
 .ilustracao {
   display: flex;
-  flex-direction:row;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
 }
@@ -64,7 +123,7 @@ button {
   width: max-content;
 }
 
-.botao-criar{
+.botao-criar {
   display: flex;
   justify-content: center;
   margin-bottom: 28px;
@@ -73,7 +132,7 @@ button {
 .botao-criar button {
   background: #263238;
   border-radius: 8px;
-  color:#FFFFFF;
+  color: #FFFFFF;
   font-family: 'Prompt';
   font-weight: 600;
   font-size: 16px;
@@ -83,7 +142,7 @@ button {
 
 .botoes-form {
   display: flex;
-  flex-direction:row;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
 }
@@ -116,7 +175,8 @@ button {
   cursor: default;
 }
 
-.botao-editar, .botao-deletar {
+.botao-editar,
+.botao-deletar {
   padding: 0;
   margin: 4px 0;
 }
@@ -131,8 +191,8 @@ button {
 }
 
 .input-invalido {
-  border-color: red!important;
-  margin-bottom: 0!important;
+  border-color: red !important;
+  margin-bottom: 0 !important;
 }
 
 .formulario {
@@ -180,7 +240,8 @@ option:disabled {
   padding-bottom: 4px;
 }
 
-select:focus, input:focus {
+select:focus,
+input:focus {
   outline: 0;
 }
 
@@ -192,7 +253,7 @@ select:focus, input:focus {
   margin-bottom: 12px;
 }
 
-.botoes-card button{
+.botoes-card button {
   background-color: inherit;
 }
 
@@ -285,7 +346,7 @@ select:focus, input:focus {
 }
 
 .info-card {
-  display:grid;
+  display: grid;
   grid-template-columns: min-content min-content repeat(3, 1fr);
   grid-template-areas:
     "categoria prioridade status"
@@ -294,11 +355,11 @@ select:focus, input:focus {
   box-sizing: border-box;
 }
 
-.icone-unchecked{
+.icone-unchecked {
   background: transparent;
 }
 
-.icone-checked{
+.icone-checked {
   background-image: url("/assets/icones/check-Feito.png");
   border: none !important;
 }
@@ -322,13 +383,13 @@ select:focus, input:focus {
 }
 
 input::placeholder {
-  color:#000000
+  color: #000000
 }
 
 @media (max-width: 890px) {
   .ilustracao {
     display: flex;
-    flex-direction:column;
+    flex-direction: column;
   }
 
   .ilustracao h2 {
@@ -340,12 +401,13 @@ input::placeholder {
 @media (max-width: 650px) {
   .info-card {
     display: flex;
-    flex-direction:column;
+    flex-direction: column;
     width: min-content;
     margin-left: 0;
   }
 
-  .prioridade-tarefa, .categoria-tarefa {
+  .prioridade-tarefa,
+  .categoria-tarefa {
     margin-left: 0;
   }
 
@@ -362,7 +424,8 @@ input::placeholder {
     margin-top: 30px;
   }
 
-  .icone-checked, .icone-unchecked {
+  .icone-checked,
+  .icone-unchecked {
     margin-right: 25%;
   }
 }
